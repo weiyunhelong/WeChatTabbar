@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<block wx:if="{{blockid==0}}">
+  这里是首页
+</block>
+<block wx:if="{{blockid==1}}">
+  这里是搜索页
+</block>
+<block wx:if="{{blockid==2}}">
+  这里是我的页
+</block>
+<block wx:if="{{blockid==3}}">
+  这里是设置页
+</block>
+
+
+<tabbar tabbarData="{{tabbar}}" active="{{0}}" bgcolor="{{bgcolor}}" color="{{color}}" selectedColor="{{selectedColor}}"  showborder="{{showborder}}"  bind:tapChange="tabbarChange" />

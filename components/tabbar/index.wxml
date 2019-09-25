@@ -1,0 +1,18 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+
+<view class="tab-barv"></view>
+<view class="tab-bar" style="background:{{bgcolor}};">
+  <view class="tab-bar-border" wx:if="{{showborder}}" style="background:{{bordercolor}};"></view>
+  <block wx:for="{{list}}" wx:key="index">
+    <view class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" data-name="{{item.text}}" bindtap="switchTab">
+      <!--ICON图-->
+      <image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+      <!--红点提示-->
+      <view class="dot" wx:if="{{item.isdot}}"></view>
+      <!--数字提示-->
+      <view class="number" wx:if="{{item.number!=0}}">{{item.number}}</view>
+      <!--文字-->
+      <view style="color: {{selected === index ? selectedColor : color}};margin-top:{{(item.isdot&&item.number==0)?-10:(item.number!=0?-20:0)}}rpx;">{{item.text}}</view>
+    </view>
+  </block>
+</view>
