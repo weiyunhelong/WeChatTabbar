@@ -1,0 +1,16 @@
+<!--pages/index/test.wxml-->
+<block wx:if="{{blockid==0}}">
+  这里是首页A
+</block>
+<block wx:if="{{blockid==1}}">
+  这里是首页B
+</block>
+<block wx:if="{{blockid==2}}">
+  这里是首页C
+</block>
+<block wx:if="{{blockid==3}}">
+  这里是首页D
+</block>
+
+
+<tabbar tabbarData="{{tabbar}}" active="{{0}}" bgcolor="{{bgcolor}}" color="{{color}}" selectedColor="{{selectedColor}}"  showborder="{{showborder}}"  bind:tapChange="tabbarChange" />
