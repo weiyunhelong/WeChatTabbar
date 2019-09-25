@@ -10,9 +10,9 @@
       <!--红点提示-->
       <view class="dot" wx:if="{{item.isdot}}"></view>
       <!--数字提示-->
-      <view class="number" wx:if="{{item.number!=0}}">{{item.number}}</view>
+      <view class="number" wx:if="{{item.number!=0&&item.number!=undefined}}">{{item.number}}</view>
       <!--文字-->
-      <view style="color: {{selected === index ? selectedColor : color}};margin-top:{{(item.isdot&&item.number==0)?-10:(item.number!=0?-20:0)}}rpx;">{{item.text}}</view>
+      <view style="color: {{selected === index ? selectedColor : color}};margin-top:{{(item.isdot&&item.number==0)?-10:(item.number!=0&&item.number!=undefined?-20:0)}}rpx;">{{item.text}}</view>
     </view>
   </block>
 </view>
